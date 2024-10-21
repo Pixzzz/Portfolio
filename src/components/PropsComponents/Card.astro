@@ -1,0 +1,53 @@
+---
+interface Props {
+	Picture: string;
+	NameTitle: string;
+	Description: string;
+	Href: string;
+	GHerft: string;
+}
+
+const { Picture, NameTitle, Description, Href, GHerft } = Astro.props;
+
+import Github from "../../../public/github.astro";
+---
+
+<div class="container flex flex-col items-center">
+	<li class="link-card">
+		<div
+			class="relative flex flex-col bg-custom-black text-white shadow-sm rounded-lg w-96"
+		>
+			<div class="relative h-56 m-2.5 overflow-hidden rounded-md">
+				<img src={Picture} alt="Card-image" class="w-full h-full bg-cover" />
+			</div>
+			<div class="p-4">
+				<h6 class="mb-2 text-slate-800 text-xl font-semibold">
+					{NameTitle}
+				</h6>
+				<p class="text-slate-600 leading-normal font-light">
+					{Description}
+				</p>
+			</div>
+			<div class="px-4 pb-4 pt-0 mt-2">
+				<div class="flex space-x-6">
+					<a
+						class="rounded-md text-white bg-slate-800 py-2 px-4 border border-transparent text-center text-sm transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+						type="button"
+						href={Href}
+					>
+						View project
+					</a>
+					<a href={GHerft}>
+						<Github />
+					</a>
+				</div>
+			</div>
+		</div>
+	</li>
+</div>
+
+<style>
+	li {
+		list-style-type: none;
+	}
+</style>

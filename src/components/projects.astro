@@ -1,0 +1,33 @@
+---
+import Card from "./PropsComponents/Card.astro";
+---
+
+<div id="Projects">
+    <div class="h-640 bg-gradient-to-b from-custom-Light-Green to-custom-Green">
+        <div class="grid  md:grid-cols-2 md:gap-12 lg:gap-96 relative md:absolute md:left-52 my-12 md:my-24">
+            <Card
+                Picture="/imgs/morse-pic.png"
+                NameTitle="Morse converter"
+                Description=`This is one of my latest project that i already made, 
+                it use for convert word into morse code and de code them into normal words`
+                Href="https://morse-converter.vercel.app/"
+                GHerft="https://github.com/Pixzzz/morse-converter.git"
+            />
+
+            <Card
+                Picture="/imgs/pomodoro-pic.png"
+                NameTitle="Pomodorox"
+                Description="This project is simple, its just about a pomodoro timer"
+                Href="https://pomodorox-pi.vercel.app/index.html"
+                GHerft="https://github.com/Pixzzz/Pomodorox.git"
+            />
+        </div>
+        <a href="https://github.com/Pixzzz?tab=repositories"
+        class="block bg-custom-black md:absolute md:left-[720px] my-8 md:my-56 rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mx-auto md:ml-2"
+        type="button"
+        >
+            More projects
+    </a>
+    </div>
+    
+</div>

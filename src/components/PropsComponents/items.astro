@@ -1,0 +1,14 @@
+---
+interface Props {
+    name: string;
+}
+const { name } = Astro.props;
+---
+
+<ul class="">
+    <li
+        class="bg-custom-green text-xl text-center text-custom-Light-Green ring-1 ring-inset rounded-lg ring-custom-green"
+    >
+        {name}
+    </li>
+</ul>
